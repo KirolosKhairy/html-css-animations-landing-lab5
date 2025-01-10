@@ -1,0 +1,270 @@
+/* Section 1: Header */
+.header {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background: linear-gradient(to bottom, #0099ff, #66ccff);
+    padding: 50px;
+    color: white;
+}
+
+.header-text span {
+    color: #f8f8f6;
+}
+
+.header-image img {
+    width: 250px;
+    height: auto;
+}
+
+
+.yellow-box {
+    display: inline-block; 
+    background-color: #FFC107; 
+    padding: 10px 20px; 
+    border-radius: 5px; 
+    text-align: center; 
+}
+
+.yellow-box button {
+    background: none; 
+    border: none; 
+    color: #201b2d; 
+    font: inherit; 
+    cursor: pointer; 
+    padding: 0; 
+    font-weight: bold; 
+    font-size: 16px; 
+}
+
+.yellow-box:hover {
+    background-color: #e0a800; 
+}
+
+
+
+/* Section 2: Blocks */
+.blocks {
+    text-align: center;
+    margin: 50px 0;
+    justify-self: space-evenly ;
+
+}
+
+.blocks-container {
+    display: flex; 
+    justify-content: center; 
+    gap: 20px; 
+}
+
+.block {
+    background-color: transparent; 
+    box-shadow: none; 
+    border: none; 
+    padding: 0; 
+    text-align: center; 
+}
+
+.block img {
+    max-width: 60px; 
+    margin-bottom: 10px;
+}
+
+.block h3 {
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.block p {
+    color: #666;
+    font-size: 0.9rem;
+    margin: 0;
+}
+
+
+/* Section 3: Form */
+.form-section {
+    background: #e0f7fa;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+form input, form button {
+    margin: 10px 0;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+form button {
+    background-color: #ffcc00;
+    border: none;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* Section 4: Footer */
+.footer {
+    text-align: center;
+    padding: 20px;
+    background: #0099ff;
+    color: white;
+}
+
+
+body {
+
+
+	font-family: 'Open Sans', sans-serif;
+	color: #201b2d;
+	font-size: 15px;
+	padding: 0;
+	margin: 0;
+}
+
+div, p, input, button, form, span, a, ul, li {
+	box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	margin: 0;
+	font-family: 'Ubuntu', sans-serif;
+	font-weight: 900;
+}
+
+p {
+	line-height: 1.65em;
+}
+
+
+
+
+/* Анимация для логотипа - Bounce In */
+@keyframes bounceIn {
+    0% {
+      transform: scale(0.5) translateY(-200px);
+      opacity: 0;
+    }
+    60% {
+      transform: scale(1.1) translateY(30px);
+      opacity: 1;
+    }
+    100% {
+      transform: scale(1) translateY(0);
+    }
+  }
+  
+  /* Анимация для логотипа - Pulse */
+  @keyframes pulse {
+    0% {
+      transform: scale(1);
+      opacity: 1;
+    }
+    50% {
+      transform: scale(1.1);
+      opacity: 0.8;
+    }
+    100% {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+  
+  /* Анимация для изображения - Slide In + Rotate */
+  @keyframes slideInRotate {
+    from {
+      transform: translateX(100%) rotate(45deg);
+      opacity: 0;
+    }
+    to {
+      transform: translateX(0) rotate(0);
+      opacity: 1;
+    }
+  }
+  
+  /* Анимация для блоков - Fade In + Zoom */
+  @keyframes fadeInZoom {
+    0% {
+      opacity: 0;
+      transform: scale(0.8);
+    }
+    100% {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+  
+  /* Анимация для кнопки - Shake */
+  @keyframes shake {
+    0% {
+      transform: translateX(0);
+    }
+    25% {
+      transform: translateX(-10px);
+    }
+    50% {
+      transform: translateX(10px);
+    }
+    75% {
+      transform: translateX(-10px);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+  
+  /* Анимация для кнопки - Highlight */
+  @keyframes highlight {
+    0% {
+      background-color: #ffcc00;
+    }
+    50% {
+      background-color: #e0a800;
+    }
+    100% {
+      background-color: #ffcc00;
+    }
+  }
+  
+  /* Применение анимаций */
+  .header-text img {
+    animation: bounceIn 1.5s ease-out;
+  }
+  
+  .header-text img:hover {
+    animation: pulse 1s infinite;
+  }
+  
+  .header-image img {
+    animation: slideInRotate 1.5s ease-in-out;
+  }
+  
+  .blocks .block {
+    animation: fadeInZoom 1.5s ease-in-out;
+  }
+  
+  .blocks .block:hover {
+    animation: fadeInZoom 0.8s ease-in-out;
+    transform: scale(1.1);
+  }
+  
+  form button {
+    animation: shake 0.6s ease-in-out;
+  }
+  
+  form button:hover {
+    animation: highlight 0.6s infinite alternate;
+    transform: scale(1.1);
+    background-color: #e0a800;
+    transition: transform 0.3s, background-color 0.3s;
+  }
+  
